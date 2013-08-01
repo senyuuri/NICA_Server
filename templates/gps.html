@@ -1,0 +1,7 @@
+{"gps":[
+	{% if data %}
+	{% for gps in data %}
+	{% if gps.user.phonenum!=data[0].user.phonenum %},{% endif %}{"username":"{{gps.user.username}}","x":"{{gps.x_cord}}","y":"{{gps.y_cord}}","date":"{{gps.date.strftime('%d-%m-%y, %H:%M')}} " }
+	{% endfor %}
+	{% endif %}
+	]}

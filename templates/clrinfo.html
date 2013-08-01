@@ -1,0 +1,8 @@
+{"user_info":[
+	{% if members %}
+	{% for member in members %}
+
+	{% if member.phonenum != members[0].phonenum %},{% endif %}{"phonenumber":"{{member.phonenum}}", "username":"{{member.username}}"}
+	{% endfor %}
+	{% endif %}
+]}
